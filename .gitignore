@@ -35,6 +35,7 @@ nosetests.xml
 .project
 .pydevproject
 
+migration
 venv
 app.db
 workingTitle.log*
