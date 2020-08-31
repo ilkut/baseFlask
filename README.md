@@ -3,4 +3,4 @@ Blueprinted flask scaffolding including homepage and user profile for future clo
 
 This does not have password recovery.
 
-Based on : [Miguel Grinbergs guide.](courses.miguelgrinberg.com)
+Based on : [Miguel Grinberg's guide.](courses.miguelgrinberg.com)
