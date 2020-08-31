@@ -9,5 +9,5 @@ class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class NoteForm(FlaskForm):
-    note = TextAreaField(('Say something'), validators=[DataRequired(), Length(min=1, max=140)])
+    note = TextAreaField(('Enter note'), validators=[DataRequired(), Length(min=1, max=140)])
     submit = SubmitField(('Submit'))

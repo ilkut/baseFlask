@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
+    <h3>Hi, {{ current_user.username }}!</h3>
     <form action="" method="POST">
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.note.label }}<br>
+        <p>{{ form.note.label }}<br>
             {{ form.note(cols=32, rows=4) }}<br>
             {% for error in form.note.errors %}
             <span style="color: red;">[{{ error }}]</span>
