@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td> <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7e2ccb03-9e20-438e-b634-3c5e75849e9d/dcrjw7f-74a4319d-81fd-4110-ae2c-5efdbb521d24.png/v1/fill/w_894,h_894,q_70,strp/another_bob_ross_pixel_art_by_joshgum_dcrjw7f-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMDAwIiwicGF0aCI6IlwvZlwvN2UyY2NiMDMtOWUyMC00MzhlLWI2MzQtM2M1ZTc1ODQ5ZTlkXC9kY3JqdzdmLTc0YTQzMTlkLTgxZmQtNDExMC1hZTJjLTVlZmRiYjUyMWQyNC5wbmciLCJ3aWR0aCI6Ijw9MTAwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qW5wIhp_xg2pCIVR6YXBFVFZQd4QnUGmjBDGnG3OrUM" height = '72' width = '72' alt=""></td>
+            <td>
+                <h1>User: {{ user.username }}</h1>
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+                {% if user == current_user %}
+                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    <hr>
+    {% for post in posts %}
+        {% include '_post.html' %}
+    {% endfor %}
+{% endblock %}
