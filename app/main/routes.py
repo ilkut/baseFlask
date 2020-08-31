@@ -19,11 +19,7 @@ def before_request():
 @bp.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-
     return render_template('index.html', title=('Home'))
-
-
-
 
 
 @bp.route('/user/<username>')
