@@ -18,6 +18,6 @@ def notes():
         db.session.add(note)
         db.session.commit()
         flash('Note saved.')
-        return redirect(url_for('notes.notes'))
+        return redirect('/notes')
     printThis = 'string'
     return render_template('notes.html', title=('Home'), notes = notes, form = form)
