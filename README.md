@@ -8,8 +8,8 @@ Based on : [Miguel Grinberg's guide.](courses.miguelgrinberg.com)
 1. virtualenv venv && source venv/Scripts/activate && pip install -r requirements.txt
 2. flask db init
 3. flask db migrate -m 'users & posts table' && flask db upgrade
-4. flask db upgrade
-5. play
+4. play
+
 
 ### To Do
 + password recovery
